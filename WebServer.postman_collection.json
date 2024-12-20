@@ -1,0 +1,100 @@
+{
+    "info": {
+        "name": "Web Server API",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Authentication",
+            "item": [
+                {
+                    "name": "Register",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "http://localhost:6000/register",
+                            "protocol": "http",
+                            "host": ["localhost"],
+                            "port": "6000",
+                            "path": ["register"]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"username\": \"testuser\",\n    \"password\": \"testpass123\"\n}"
+                        }
+                    }
+                },
+                {
+                    "name": "Login",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "http://localhost:6000/login",
+                            "protocol": "http",
+                            "host": ["localhost"],
+                            "port": "6000",
+                            "path": ["login"]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"username\": \"testuser\",\n    \"password\": \"testpass123\"\n}"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Profile",
+            "item": [
+                {
+                    "name": "Get Profile",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://localhost:6000/profile",
+                            "protocol": "http",
+                            "host": ["localhost"],
+                            "port": "6000",
+                            "path": ["profile"]
+                        }
+                    }
+                },
+                {
+                    "name": "Update Profile",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "http://localhost:6000/profile",
+                            "protocol": "http",
+                            "host": ["localhost"],
+                            "port": "6000",
+                            "path": ["profile"]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"address\": \"123 Main St\",\n    \"company\": \"Current Corp\",\n    \"interested_companies\": \"Google, Amazon, Microsoft\"\n}"
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+} 
